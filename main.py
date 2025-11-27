@@ -2,6 +2,8 @@ import datetime
 import hashlib
 import json
 
+from flask import Flask
+
 
 class Blockchain:
     def __init__(self):
@@ -57,3 +59,8 @@ class Blockchain:
             block_index += 1
 
         return True
+
+
+app = Flask(__name__)
+
+blockchain = Blockchain()
